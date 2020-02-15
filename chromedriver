@@ -1,0 +1,8 @@
+from selenium import webdriver
+
+driver = webdriver.Chrome(executable_path = "/Users/rishikakammila/Downloads/chromedriver")
+driver.get("https://www.facebook.com/")
+
+print(driver.title)
+print(driver.current_url)
+driver.close()
