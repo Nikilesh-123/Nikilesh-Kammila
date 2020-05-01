@@ -24,12 +24,12 @@ public class SampleTest {
 		driver.get(url);
 		
 		WebElement email = driver.findElement(By.id("ap_email"));
-		email.sendKeys("nikilesh.md@gmail.com");
+		email.sendKeys("xyz@gmail.com");
 		
 		WebElement submit = driver.findElement(By.id("continue"));
 		submit.click();
 		WebElement password = driver.findElement(By.id("ap_password"));
-		password.sendKeys("14Bk1@0530");
+		password.sendKeys("xyz");
 		WebElement submit1 = driver.findElement(By.id("signInSubmit"));
 		submit1.click();
 
