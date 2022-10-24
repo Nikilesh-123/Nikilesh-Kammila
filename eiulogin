@@ -1,0 +1,79 @@
+package seleniumtesting;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class pawseiu {
+
+	public static void main(String[] args) throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\ysidi\\Downloads\\chromedriver1\\chromedriver.exe\\");
+		WebDriver driver = new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.get("https://google.com");
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		
+		driver.findElement(By.name("q")).sendKeys("paws eiu");
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.findElement(By.name("q")).submit();
+		
+		//driver.findElement(By.className("pcTkSc")).click();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+
+		driver.findElement(By.className("TbwUpd")).click();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		
+		driver.findElement(By.className("login-button")).click();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		
+		driver.findElement(By.name("sid")).sendKeys("Skammila");
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		
+		driver.findElement(By.name("PIN")).sendKeys("Mango_1996");
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		
+		driver.findElement(By.xpath("//input[@type='submit']")).click();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		
+		driver.findElement(By.cssSelector("button[type='button']")).click();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		
+		System.out.println(driver.findElement(By.className("pldefault")).getText());
+		
+		System.out.println(driver.getCurrentUrl());
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		Thread.sleep(5000);
+		
+		//String[] keyword = getplainarray(driver);
+		
+		//System.out.println(keyword);
+		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+
+		driver.close();
+		
+
+		
+		
+		// TODO Auto-generated method stub
+		
+		
+	}
+
+		public static String[] getplainarray(WebDriver driver)
+{
+			driver.findElement(By.className("pldefault")).getText();
+			String plaintext = driver.findElement(By.className("pldefault")).getText();
+			String[] plainarray = plaintext.split("Personal ");
+			String[] plainarray1 = plainarray[1].split("Information ");
+			String[] plainarray2 = plainarray1[1].split("Student ");
+			String[] plainarray3 = plainarray2[1].split("Employee ");
+			String[] plainarray4 = plainarray3[1].split("Financial Aid ");
+			String[] plainarray5 = plainarray4[1].split("Training And Development ");
+			String[] plainarray6 = plainarray5[1].split("MyHealth ");
+			String[] plainarry7 = plainarray6[1].split("Proxy Menu");
+			return plainarray;
+			
+}
+}
