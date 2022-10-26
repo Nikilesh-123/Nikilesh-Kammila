@@ -11,7 +11,6 @@ public class SampleTest {
 	public static void main(String[] args) {
 		System.out.println("starting sampletest");
 		
-		
 		System.getProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
 		
 		WebDriver driver = new ChromeDriver();
