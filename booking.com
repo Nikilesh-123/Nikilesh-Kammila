@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.Select;
 public class flightbooking {
 
 	public static void main(String[] args) throws InterruptedException {
+	
 		System.setProperty("webdriver.chrome.driver","C:\\Users\\ysidi\\Downloads\\chromedriver1\\chromedriver.exe\\");
 		WebDriver driver = new ChromeDriver();
 		//handling static dropdowns , dynamic dropdown, checkboxes, radio buttons, text button, alert-jaca popups, webdriver form methods
