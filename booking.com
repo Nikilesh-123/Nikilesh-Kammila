@@ -12,6 +12,7 @@ public class flightbooking {
 		System.setProperty("webdriver.chrome.driver","C:\\Users\\ysidi\\Downloads\\chromedriver1\\chromedriver.exe\\");
 		WebDriver driver = new ChromeDriver();
 		
+		
 		//handling static dropdowns , dynamic dropdown, checkboxes, radio buttons, text button, alert-jaca popups, webdriver form methods
 		driver.get("https://www.booking.com/flights/");
 		Thread.sleep(2000);
